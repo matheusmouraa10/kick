@@ -6,7 +6,7 @@ services:
     container_name: go
     working_dir: /app
     volumes:
-      - $HOME/home/uninassau/kick.docker
+      - $HOME/home/uninassau/kick/kick:/app
     command: go run main.go
     ports:
       - "8080:8080"
@@ -93,13 +93,13 @@ networks:
   #   ports:
   #     - 9090:9090version: '3.7'
 
-services:
+  services:
   golang_aula:
     image: golang:latest
     container_name: go
     working_dir: /app
     volumes:
-      - $HOME/home/uninassau/kick.docker/workspace/aula:/app
+      - $HOME/home/uninassau/kick/kick:/app
     command: go run main.go
     ports:
       - "8080:8080"
